@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار جيليام 3</title>
+</head>
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    
+    th,
+    td {
+        border: 1px solid #dddddd;
+        text-align: center;
+        padding: 8px;
+    }
+    
+    th {
+        background-color: #f2f2f2;
+    }
+    
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .containe {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        direction: rtl;
+    }
+    
+    .question {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    
+    h3 {
+        display: block;
+        font-size: 1.5em;
+        margin-block-start: 0.83em;
+        margin-block-end: 0.83em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        unicode-bidi: isolate;
+    }
+    
+    h2 {
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+    }
+    
+    .question h3 {
+        color: #333;
+    }
+    
+    .option {
+        margin-bottom: 20px;
+    }
+    
+    .option input[typw="radio"] {
+        margin-right: 10px;
+    }
+    
+    .submit-but {
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    .submit-but:hover {
+        background-color: #45a049;
+    }
+</style>
+
+<body>
+    <table>
+        <tr>
+            <th>اكبر من 100</th>
+            <th>71-100</th>
+            <th>50-70</th>
+            <th>اصغر من 54</th>
+            <th>مؤشر اضطراب التوحد</th>
+        </tr>
+        <tr>
+            <td>مؤكد</td>
+            <td>من الاكثر احتمال</td>
+            <td>محتمل </td>
+            <td>غير مرجح</td>
+            <td>احتمالية وجود اضطراب توحد</td>
+        </tr>
+        <tr>
+
+            <td>المستوي الثالث شديد</td>
+            <td>المستوي الثاني متوسط</td>
+            <td>المستوي الاول بسيط</td>
+            <td>.......</td>
+            <td>DSM-5مستوي الشده وفق </td>
+        </tr>
+
+        <tr>
+            <td>بتطلب دعم كبير للغايه</td>
+            <td>يتطلب دعم كبير</td>
+            <td>يتطلب حد ادني من الدعم</td>
+            <td>لايوجد</td>
+            <td>التوصيف</td>
+        </tr>
+    </table>
+    <hr>
+    <hr>
+
+
+    <div class="containe">
+        <h2>اختبار حول مرض التوحد</h2>
+        <br><br>
+        <form id="autismTestForm">
+            <div class="question">
+                <h3>يستمر الطفل في السلوكيات المتكرره النمطيه اذا ترك بمفرد </h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>ينشغل الطفل بميراث محدد وبصوره عاديه</h3>
+                <div class="option">
+                    <input type="checkbox" id="q2_option1" value="نعم">
+                    <label for="q2_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q2_option2" value="لا">
+                    <label for="q2_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q2_option3" value="احيانا">
+                    <label for="q2_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q2_option4" value="نادر">
+                    <label for="q2_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يحدق او يمعن النظر في الايدي او الاشياء الموجوده في البيئة لفتره لا تقل عن خمس ثوان</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>ينقر باصباعه او بيديه بسرعه امام عنيه لفترات لاتقل مده الواحده منها عن خمس ثواني</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يقوم بحركات مندفعه و سريعه عندما ينتقل من مكان الي اخر و يرفرف بيديه او باصابعه امام وجهة او علي الجانبين</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يصدر اصواتا حاده مثل ايييييي او اصواتا اخري شبيهة بذلك كنوع من الاثارة الذاتيه</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يستخدم الالعاب او الاشياء بشكل غير صحيح كان يقوم مثلا بتلف السياره او تفكيك الالعاب الي اجزاء</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يقوم بحركات معينه علي شكل طقوس متكرره</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يكرر اصواتا غير مفهومه كالثرثره مثلا مرار و تكرار</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يستخدم الالعاب و الاشياء بطريقه نمطيه</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يظهر استثارة حسيه غير عاديه تجاه اللعب او الاشياء او اجزاء الجسم</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>ياتي بسلوكيات تتبع طقوسا محدده لا يحيد عنها</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يعجز عن المباده بالحديث مع الاقران او الاخرين</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يبدي الطفل عدم الاهتمام او حتي اهتمام ضعيفابما يفعله الاخرين</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>ليس بمقدوره القيام بتقليد الاخرين في اللعب او الانشطه التعليميه</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>ليس بوسعه تتبع ايماءات الاخرين الاشارات للنظر الي شئ ما مثل ايماء الشخص براسه و الاشاره باليد اشارات تعكس لغة الجسد</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يظهر عدم اهنمام بجذب انتباه الاخرين لايحاول جذب انتباه شخص اخر او الحفاظ عليه او توجيه</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يظهر سعاده محدوده عند الفاعل مع الاخرين </h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يظهر اهتمام ضعيف او لا يظهر اي اهتمام عندما يعرض عليه الاخرين لعبه او شئ ما</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يبدو غير مهتم بالاشاره للاخرين الي الاشياء المحيطه </h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يظهر عدم رغبه او نفور في حث الاخرين علي التفاعل معا </h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يبدو عدم استجابه او الحد الادني منها عندما يحاول الاخرين التفاعل معه</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يظهر تواصل اجتماعي محدود</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يفشل في تكوين صداقات مع اشخاص اخرين</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>غير قادر علي الانخراط في اللعب الابداعي و التخيلي او الرمزي</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يظهر اهتمام محدودا او لايظهر اي اهتمام بالاشخاص الاخرين</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يستجيب بشكل غير مناسب للمثيرات المضحكه</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يجد صعوبه في فهم النكته او الطرفه</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يصعب عليه فهم العبارات العاميه</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يواجه مشاكل في تحديد متي يكون الشخص مضايقا</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>غير قادر علي سخرية الاخرين منه</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>ليس بوسعه ان يفهم الاسباب التي تجعل الاخرين يكرهونه</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يصعب عليه نتبؤ بالنتائج المحتمله في المواقف الاجتماعيه المختلفه</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يجد صعوبه في ادراك ان الاخرين لديهم افكار و مشاعر مختلفه عنه</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>ليس بوسعه ان يدرك ان الاخرين قد لايعرفون شيئا ما </h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يحتاج قدر كبير الطمانينه اذا تغيرت الامور او حدث خطا ما</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يصاب بالاحباط الشديد عندما لا يستطيع القيام بشئ معين</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يظهر نوبات غضب عن الاصابة بالاحباط</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يشعر بالضيق عند تغير الروتين</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يستجيب سلبيا عندما تعطي له الامور او الاشارات او بطلب منه شئ</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يظهر ردود فعل شديده مثل البكاء او الضراخ او نوبات الغضب كاستجابة الضوضاء عاليا غير متوقعه</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يبدي نوبات غضب عندما لا تسير الامور وفقا لطريقته</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يدخل في نوبات غضب عندما يطلب منه التوقف عن شئ يستمتع به</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>عندما يستخدم الحديث يكون حديث غير عادي</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يتمسك بمفردات و معاني محدده بالكلمات</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يتحدث بافراط حول موضوع واحد يستدعي انتباهه</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يظهر تفوقا في مهاره او معرفه خاصه بموضعات محدده يتمتع بذاكره ممتازه</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يظهر اهتماما مكثفا واسعه لموضعلت فكريه محدده </h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يبدي ملاحظات ساذجه لردوج الفعل او استجابات الاخرين </h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يكرر او يردد الكلمات او الجمل لفظيا او من خلال الاشارات </h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يعيد كلمات خارج سياق الحديث </h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يستخدم نعم او لا بطريقه غير ملائمه كان يقول نعم عند ساله اذا كان يريد شئ منفرا له او يكره او يقول لا عندما نساله اذا كان يريد شئ مفضل</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يستخدم هو او هي عند الاشاره الي نفسه</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>يستخدم كلاهما غير مناسب في النغمه و الشده و المعدل </h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+            <div class="question">
+                <h3>ينطق كلمات او عبارات خاصه لا معني لها لاخرين</h3>
+                <div class="option">
+                    <input type="checkbox" id="q1_option1" name="q1" value="نعم">
+                    <label for="q1_option1">نعم</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option2" name="q1" value="لا">
+                    <label for="q1_option2">لا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option3" name="q1" value="احيانا">
+                    <label for="q1_option3">احيانا</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_option4" name="q1" value="نادر">
+                    <label for="q1_option4">نادر</label>
+                </div>
+            </div>
+
+            <button class="submit-but" type="submit">إرسال</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('autismTestForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // جمع الإجابات
+            var answer1 = document.querySelectorAll('input[name="q1"]:checked');
+            var answer2 = document.querySelectorAll('input[name="q2"]:checked');
+            var answer3 = document.querySelectorAll('input[name="q3"]:checked');
+
+            // عملية تقدير النتيجة (يمكن تحسينها)
+            var score = (answer1.length + answer2.length + answer3.length) / 6 * 100;
+
+            // عرض النتيجة
+            alert("النتيجة: " + score.toFixed(2) + "%");
+        });
+    </script>
+</body>
+
+</html>
+</body>
+
+</html>
